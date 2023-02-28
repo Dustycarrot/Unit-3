@@ -305,7 +305,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: m_Name
-      value: SimpleFarmer_Man_01_Black
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: m_RootOrder
@@ -727,5 +727,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Object
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8785176104477146682, guid: 7af2e7ce135636a4a81db477e7fdf0a7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7af2e7ce135636a4a81db477e7fdf0a7, type: 3}

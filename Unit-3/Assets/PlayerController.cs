@@ -8,6 +8,7 @@ private Rigidbody playerRb;
 public float jumpForce;
 public float gravityModifier;
 public bool isOnGround = true;
+    public bool gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,15 @@ public bool isOnGround = true;
     }
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Object"))
+        {
+            gameOver = true;
+            Debug.Log("gameover");
+        }
+        
     }
 }

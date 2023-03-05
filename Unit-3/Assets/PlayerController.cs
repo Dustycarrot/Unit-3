@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRb;
-    public float jumpForce;
-    public float gravityModifier;
-    public bool isOnGround = true;
-    public bool gameOver = false;
-     
+private Rigidbody playerRb;
+public float jumpForce;
+public float gravityModifier;
+public bool isOnGround = true;
+    public bool gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +30,11 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
         }
-        else if (collision.gameObject.CompareTag("Obstacle"))
+        else if (collision.gameObject.CompareTag("Object"))
         {
             gameOver = true;
             Debug.Log("gameover");
         }
+        
     }
 }
